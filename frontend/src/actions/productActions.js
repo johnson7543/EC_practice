@@ -8,7 +8,7 @@ import {
 export const listProducts = () => async (dispatch) => {
   dispatch({
     type: PRODUCT_LIST_REQUEST,
-  });
+  }); 
   try {
     const { data } = await Axios.get('/api/products');
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
