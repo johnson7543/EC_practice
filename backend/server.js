@@ -1,9 +1,15 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 
+dotenv.config();
+
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const url = "mongodb+srv://johnson7543:jo10055096@cluster0.ciubh.mongodb.net/EC_practice?retryWrites=true&w=majority";
 mongoose.connect(url, {
   useNewUrlParser: true,
