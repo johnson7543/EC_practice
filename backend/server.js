@@ -1,15 +1,23 @@
 import express from 'express';
-import data from './data.js';
+import mongoose from 'mongoose';
+import productRouter from './routers/productRouter.js';
+import userRouter from './routers/userRouter.js';
 
-// const express = require('express');
 const app = express();
-
-app.get('/api/products', (req, res) => {
-  res.send(data.products);
+const url = "mongodb+srv://johnson7543:jo10055096@cluster0.ciubh.mongodb.net/test?retryWrites=true&w=majority";
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
+app.use('/api/users', userRouter);
+app.use('/api/products', productRouter);
 app.get('/', (req, res) => {
   res.send('Server is ready');
+});
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
 });
 
 const port = process.env.PORT || 5000;

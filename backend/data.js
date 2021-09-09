@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Basir',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: true,
+    },
+    {
+      name: 'John',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: '1',
       name: 'Arcteryx 始祖鳥 LOGO尼龍腰帶 黑',
       category: 'Belt',
       image: '/images/p1.jpeg',
@@ -13,7 +28,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
       name: 'Arcteryx 始祖鳥 短袖休閒Tee 白',
       category: 'Shirts',
       image: '/images/p2.jpeg',
@@ -25,7 +39,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
       name: 'Arcteryx 始祖鳥 32L多功能背包 黑',
       category: 'Bag',
       image: '/images/p3.jpeg',
@@ -37,7 +50,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
       name: 'Arcteryx 始祖鳥 休閒Tee 翠鳥藍',
       category: 'Shirts',
       image: '/images/p4.jpeg',
@@ -49,7 +61,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
       name: 'Arcteryx 始祖鳥 遮陽帽 黑',
       category: 'Hat',
       image: '/images/p5.jpeg',
@@ -61,7 +72,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
       name: 'The North Face 斜背包',
       category: 'Bag',
       image: '/images/p6.jpeg',
@@ -73,7 +83,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '7',
       name: 'The North Face Face 男 短袖T恤 黑',
       category: 'Shirts',
       image: '/images/p7.jpeg',
@@ -85,7 +94,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '8',
       name: 'The North Face 女 短袖T恤 黑',
       category: 'Shirts',
       image: '/images/p8.jpeg',
@@ -97,7 +105,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '9',
       name: 'SALOMON X ULTRA 4 低筒登山鞋',
       category: 'Shoes',
       image: '/images/p9.jpeg',
@@ -109,7 +116,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '10',
       name: 'Mammut LOGO短袖上衣 白',
       category: 'Shirts',
       image: '/images/p10.jpeg',
@@ -121,7 +127,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '11',
       name: 'Mammut LOGO短袖上衣 海洋藍',
       category: 'Shirts',
       image: '/images/p11.jpeg',
@@ -133,7 +138,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '12',
       name: 'Mammut LOGO短袖上衣 黑',
       category: 'Shirts',
       image: '/images/p12.jpeg',
@@ -145,7 +149,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '13',
       name: 'Mammut Ducan 24L 輕量健行後背包',
       category: 'Bag',
       image: '/images/p13.jpeg',
@@ -157,7 +160,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '14',
       name: 'Mammut 輕量健行後背包 花崗岩灰',
       category: 'Bag',
       image: '/images/p14.jpeg',
@@ -169,7 +171,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '15',
       name: 'MAMMUT 超輕量防水防風外套 藏青',
       category: 'jacket',
       image: '/images/p15.jpeg',
