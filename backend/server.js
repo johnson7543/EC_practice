@@ -4,7 +4,7 @@ import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 
 const app = express();
-const url = "mongodb+srv://johnson7543:jo10055096@cluster0.ciubh.mongodb.net/test?retryWrites=true&w=majority";
+const url = "mongodb+srv://johnson7543:jo10055096@cluster0.ciubh.mongodb.net/EC_practice?retryWrites=true&w=majority";
 mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
