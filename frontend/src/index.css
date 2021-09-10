@@ -179,6 +179,9 @@ img.medium {
   margin: 0.1rem;
 }
 /* Alert */
+.loading {
+  display: block !important;
+}
 .success {
   color: #20a020;
 }
@@ -231,4 +234,17 @@ img.medium {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Checkout Steps */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: #f08000;
+  color: #f08000;
 }
